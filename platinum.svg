@@ -1,0 +1,60 @@
+<svg width="300" height="188" viewBox="0 0 300 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Основной фон -->
+  <rect width="300" height="188" rx="12" fill="url(#platinumGradient)" />
+  
+  <!-- Голографический эффект -->
+  <rect width="300" height="188" rx="12" fill="url(#hologram)" fill-opacity="0.3"/>
+  
+  <!-- Эффект 3D-глубины -->
+  <rect x="10" y="10" width="280" height="168" rx="10" fill="none" stroke="url(#depth)" stroke-width="2"/>
+  
+  <defs>
+    <!-- Градиент платины -->
+    <linearGradient id="platinumGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E5E4E2"/>
+      <stop offset="50%" stop-color="#C0C0C0"/>
+      <stop offset="100%" stop-color="#E5E4E2"/>
+    </linearGradient>
+    
+    <!-- Голографический эффект -->
+    <pattern id="hologram" patternUnits="userSpaceOnUse" width="50" height="50">
+      <path d="M0 0L50 50" stroke="#ffffff" stroke-width="2" stroke-opacity="0.1"/>
+      <path d="M0 50L50 0" stroke="#ffffff" stroke-width="2" stroke-opacity="0.1"/>
+      <circle cx="25" cy="25" r="10" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.1"/>
+    </pattern>
+    
+    <!-- Эффект глубины -->
+    <linearGradient id="depth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Логотип -->
+  <circle cx="30" cy="30" r="15" fill="url(#logoGradient)"/>
+  <text x="30" y="30" fill="#000" font-size="12" text-anchor="middle" alignment-baseline="middle">CB</text>
+  
+  <!-- Номер карты -->
+  <text x="150" y="120" fill="#fff" font-size="16" text-anchor="middle" filter="url(#glow)">•••• 9012</text>
+  
+  <!-- Имя владельца -->
+  <text x="30" y="160" fill="#fff" font-size="12" filter="url(#glow)">IVAN IVANOV</text>
+  
+  <!-- Срок действия -->
+  <text x="250" y="160" fill="#fff" font-size="12" filter="url(#glow)">12/25</text>
+  
+  <!-- Градиент логотипа -->
+  <radialGradient id="logoGradient">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#E5E4E2"/>
+  </radialGradient>
+  
+  <!-- Эффект свечения -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+    <feMerge>
+      <feMergeNode in="coloredBlur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</svg>

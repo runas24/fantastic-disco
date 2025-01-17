@@ -1,0 +1,49 @@
+<svg width="300" height="188" viewBox="0 0 300 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Основной фон -->
+  <rect width="300" height="188" rx="12" fill="url(#goldGradient)" />
+  
+  <!-- Текстура металла -->
+  <rect width="300" height="188" rx="12" fill="url(#metalTexture)" />
+  
+  <!-- Эффект гравировки -->
+  <path d="M30 30h240v128H30V30z" stroke="url(#engraving)" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <defs>
+    <!-- Градиент золота -->
+    <linearGradient id="goldGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    
+    <!-- Текстура металла -->
+    <pattern id="metalTexture" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="2" fill="#ffffff" fill-opacity="0.1"/>
+      <circle cx="5" cy="5" r="1" fill="#000000" fill-opacity="0.1"/>
+    </pattern>
+    
+    <!-- Эффект гравировки -->
+    <linearGradient id="engraving" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Логотип -->
+  <circle cx="30" cy="30" r="15" fill="#fff"/>
+  <text x="30" y="30" fill="#000" font-size="12" text-anchor="middle" alignment-baseline="middle">CB</text>
+  
+  <!-- Номер карты -->
+  <text x="150" y="120" fill="#fff" font-size="16" text-anchor="middle" filter="url(#shadow)">•••• 5678</text>
+  
+  <!-- Имя владельца -->
+  <text x="30" y="160" fill="#fff" font-size="12" filter="url(#shadow)">IVAN IVANOV</text>
+  
+  <!-- Срок действия -->
+  <text x="250" y="160" fill="#fff" font-size="12" filter="url(#shadow)">12/25</text>
+  
+  <!-- Тень текста -->
+  <filter id="shadow">
+    <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.5"/>
+  </filter>
+</svg>
