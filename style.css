@@ -94,14 +94,10 @@ h1, h2, h3 {
 .feature-card .icon {
   width: 80px;
   height: 80px;
-  background: var(--primary-color);
-  border-radius: 50%;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 2rem;
 }
 
 .step-card {
