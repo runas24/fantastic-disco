@@ -16,12 +16,18 @@ AOS.init({
 
 // Настройка плавной прокрутки
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+  const target = anchor.getAttribute('href');
+  if (target && target !== '#') {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetElement = document.querySelector(target);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     });
-  });
+  }
 });
 
 // Анимация карты в hero секции
@@ -53,12 +59,14 @@ ScrollReveal().reveal('.feature-card', {
 });
 
 // Инициализация Tippy.js
-tippy('[data-tippy-content]', {
-  theme: 'light',
-  animation: 'scale',
-  duration: 200,
-  arrow: true
-});
+if (typeof tippy !== 'undefined') {
+  tippy('[data-tippy-content]', {
+    theme: 'light',
+    animation: 'scale',
+    duration: 200,
+    arrow: true
+  });
+}
 
 // Анимация кнопки CTA
 gsap.from('.btn-primary', {
